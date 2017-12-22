@@ -1,0 +1,73 @@
+<div class="user-content">
+    <div class="container">
+    <div class="user-create">
+    <div class="card">
+    <h3 class="card-header">
+    Registration
+  	</h3>
+  	<br>
+  	 
+  	  <div class="card-block">
+  	  <div class="user-create">
+    
+      <form #userForm="ngForm" (ngSubmit) = "createUser(userForm)" novalidate>
+	      <div class="form-group col-md-6">
+	      <label for="name">Name :-</label>
+	        <input type="text" id="name" class="form-control" placeholder="Enter your name" 
+	               required
+	               name="name" [(ngModel)]="newUser.name"
+	               #name="ngModel" >
+	        <br />
+	        <div *ngIf="name.errors && name.dirty && name.untouched"
+	             class="alert alert-danger">
+	            <div [hidden]="!name.errors.required">
+	              Name is required.
+            	</div>
+            	<br />
+        	</div>
+        	<label for="password">Password :-</label>
+	        <input type="password" id="password" class="form-control" placeholder="Enter your password" 
+	               required
+	               name="password" [(ngModel)]="newUser.password"
+	               #password="ngModel" >
+	        <br />  
+	        <label for="education">Education :-</label>           
+	        <input type="text" id="education" class="form-control" placeholder="Enter your highest Education" 
+	               required
+	               name="education" [(ngModel)]="newUser.education"
+	               #education="ngModel" >
+	        <br />
+	        <label for="primarySkill">Primary Skill :-</label>    
+	        <input type="text" id="primarySkill" class="form-control" placeholder="Enter your primary skill" 
+	               required
+	               name="primarySkill" [(ngModel)]="newUser.primarySkill"
+	               #primarySkill="ngModel" >
+	        <br />
+	        <label for="secondarySkill">Secondary Skill :-</label>      
+	        <input type="text" id="secondarySkill" class="form-control" placeholder="Enter your secondary skill" 
+	               required
+	               name="secondarySkill" [(ngModel)]="newUser.secondarySkill"
+	               #secondarySkill="ngModel" >
+	        <br />
+	        <label for="experience">Experience :-</label>                    
+	        <input type="text" id="experience" class="form-control" placeholder="Enter your Experience in months" 
+	               required
+	               name="experience" [(ngModel)]="newUser.experience"
+	               #experience="ngModel" >
+	        <br />
+	        <label for="location">Location :-</label>             
+	        <input type="text" id="location" class="form-control" placeholder="Enter your Location" 
+	               required
+	               name="location" [(ngModel)]="newUser.location"
+	               #location="ngModel" >
+	        <br />       
+	        <button type="submit" class="btn btn-primary">Submit</button> 
+	        <button type="reset" class="btn btn-secondary">Reset</button>
+	      </div>                          
+      </form>
+      </div>
+      </div>
+      </div>
+    </div>
+</div>
+</div>

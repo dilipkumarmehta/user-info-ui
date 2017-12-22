@@ -1,0 +1,39 @@
+<div class="container">
+	<div class="card">
+		<h3 class="card-header">User List</h3>
+		<br>
+		<div class="card-block">
+			<div class="list-user">
+			<table class="table table-striped">
+ 			<thead>
+ 				<tr>
+ 					<th>Id</th>
+ 					<th>Name</th>
+ 					<th>Education</th>
+ 					<th>Primary Skills</th>
+ 					<th>Secondary Skills</th>
+ 					<th>Experience</th>
+ 					<th>Location</th>
+ 					<th>Actions</th>
+ 				</tr>
+ 			</thead>		
+ 			<tbody *ngFor="let user of users">
+			    <tr>
+			    	<td>{{user.id}}</td>
+			      	<td>{{user.name}}</td>
+			      	<td>{{user.education}}</td>
+			      	<td>{{user.primarySkill}}</td>
+			      	<td>{{user.secondarySkill}}</td>
+			      	<td>{{user.experience}}</td>
+			      	<td>{{user.location}}</td>
+			      	<td>
+			      		<button type="button" class="btn btn-info" routerLink="/editUser" (click)=editUser(user)>Edit</button>
+			      		<button type="button" class="btn btn-danger" (click)=deleteUser(user.id)>Delete</button>
+			      	</td>
+			    </tr>
+			</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>

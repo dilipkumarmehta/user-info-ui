@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="card">
+		<h3 class="card-header">Edit User</h3>
+		<br>
+
+		<div class="card-block">
+			<div class="user-edit">
+				<form novalidate>
+					<div class="form-group col-md-6">
+						<label for="id">Id :-</label> <input class="form-control"
+							type="text" name="id" [(ngModel)]="editingUser.id" required
+							disabled> <br> <label for="name">Name :-</label> <input
+							class="form-control" type="text" name="name"
+							[(ngModel)]="editingUser.name" required> <br> <label
+							for="password">Password :-</label> <input class="form-control"
+							type="password" name="password"
+							[(ngModel)]="editingUser.password" required> <br> <label
+							for="education">Education :-</label> <input class="form-control"
+							type="text" name="education" [(ngModel)]="editingUser.education"
+							required> <br> <label for="primarySkill">Primary
+							Skill :-</label> <input class="form-control" type="text"
+							name="primarySkill" [(ngModel)]="editingUser.primarySkill"
+							required> <br> <label for="secondarySkill">Secondary
+							Skill :-</label> <input class="form-control" type="text"
+							name="secondarySkill" [(ngModel)]="editingUser.secondarySkill"
+							required> <br> <label for="experience">Experience
+							:-</label> <input class="form-control" type="text" name="experience"
+							[(ngModel)]="editingUser.experience" required> <br>
+						<label for="location">Location :-</label> <input
+							class="form-control" type="text" name="location"
+							[(ngModel)]="editingUser.location" required> <br>
+						<button type="submit" class="btn btn-primary"
+							(click)=updateUser(editingUser)>Save</button>
+						<button type="reset" class="btn btn-secondary">Reset</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
